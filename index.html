@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D O M</title>
+</head>
+
+<body>
+
+
+    <h1>DOM - Document Object Model</h1>
+
+    <p>A DOM <strong>Document Object Model</strong>, que em portuguêS significa Modelo de Documento por Objetos.
+        Trata-se de uma interface de programação que os navegadores utilizam para representar páginas na Web.</p>
+
+    <p>Pablo Soares da Silva</p>
+
+    <div id="mensagem" onclick="mudar()" onclick="entrar()" onmouseout="sair()" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odit nostrum officia esse atque! Optio sunt odio
+        ut quae. Iusto modi, similique voluptate culpa ipsum quam ad ullam esse laboriosam!</div>
+
+
+    <script>
+        //window.document.write('Olá Mundo')
+        //window.document.write(window.document.charset)
+        //window.document.write(window.navigator.appName)
+        //window.document.write(window.document.URL);
+
+
+        //Criar variáveis
+
+        var paragrafo = window.document.getElementsByTagName('p')[0];
+        
+        paragrafo.style.color = 'Cyan';
+
+        var corpo = window.document.body;
+        corpo.style.background = 'Blue';
+        corpo.style.fontFamily = 'Arial';
+        corpo.style.fontSize = '16pt';
+
+        var msg = window.document.getElementById('mensagem');
+        msg.style.background = 'white';
+
+
+        //Eventos em JS
+
+        function mudar() {
+            //msg.innerText = 'Vai aparecer este texto quando o usuário clicar na DIV'
+            msg.style.background = 'gray'
+        }
+
+        function entrar() {
+            msg.style.background = 'cyan'
+        }
+
+        function sair() {
+            msg.style.background = 'yellow'
+        }
+
+        msg.addEventListener('click', mudar)
+
+        window.document.write(paragrafo.innerHTML);
+
+       
+
+
+    </script>
+
+
+
+</body>
+
+</html>
